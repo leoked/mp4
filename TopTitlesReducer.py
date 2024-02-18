@@ -1,16 +1,13 @@
 #!/usr/bin/env python3
 import sys
 
-count = 0
-countList = []
+countList = dict()
 # input comes from STDIN
 for line in sys.stdin:
-    if count == 10:
-        break
+        line = line.strip().split('\t')
+        countList[line[0]] = int(line[1])
 
-    line = line.strip()
-    countList.append(line)
-    count += 1
+sortD = dict(sorted(countList.items(), key = lambda item: item[1]))
 
-for item in reversed(countList):
-    print(item)
+for w in sortD:
+        print('%s\t%s' % ( w , sortD[w] ))

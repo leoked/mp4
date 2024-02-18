@@ -1,9 +1,6 @@
 #!/usr/bin/env python3
-
 import sys
 import string
-
-
 
 stopWordsPath = sys.argv[1]
 delimitersPath = sys.argv[2]
@@ -26,6 +23,4 @@ for line in sys.stdin:
     for w in words:
         if w in stopWords or w == '':
             continue
-        print('%s' % ( w )) 
-
-
+        print('%s' % ( w ))
