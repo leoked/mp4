@@ -7,11 +7,7 @@ tList = []
 for line in sys.stdin:
   line = line.strip().split('\t')
   fList.append(int(line[0].strip()))
-  tp = line[1].split(' ')
-  for p in tp:
-    if p == line[0].strip():
-      continue
-    tList.append(int(p.strip()))
+  tList.append(int(line[1].strip()))
 
 fList = set(fList)
 tList = set(tList)
