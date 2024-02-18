@@ -25,6 +25,6 @@ for line in sys.stdin:
     for w in words:
         if w in stopWords:
             continue
-        print('%s\t%s' % ( w , 1 )) 
+        print('%s' % ( w )) 
 
 
