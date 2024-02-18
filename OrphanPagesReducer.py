@@ -6,6 +6,7 @@ tList = []
 
 for line in sys.stdin:
   line = line.strip().split('\t')
+  
   fList.append(int(line[0].strip()))
   tList.append(int(line[1].strip()))
 

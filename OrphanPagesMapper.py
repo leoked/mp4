@@ -6,6 +6,6 @@ for line in sys.stdin:
   fp = line[0].strip()
   tp = line[1].strip().split(' ')
   for p in tp:
-    if tp == fp:
+    if p == fp:
       continue
-    print('%s\t%s' % ( fp , tp ))
+    print('%s\t%s' % ( fp , p ))
