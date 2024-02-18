@@ -12,7 +12,7 @@ with open(stopWordsPath) as f:
     stopWords = f.read().split('\n')
 
 with open(delimitersPath) as f:
-    delimiter = f.read().strip()
+    delimiter = f.read()
 
 print(stopWords)
 print(delimiter)
@@ -21,9 +21,10 @@ for line in sys.stdin:
     line = line.strip().lower()
     for c in delimiter:
         line = line.replace(c, ' ')
+    line = line.replace('  ', ' ')
     words = line.split(' ')
     for w in words:
-        if w in stopWords:
+        if w in stopWords or w == '':
             continue
         print('%s' % ( w )) 
 
