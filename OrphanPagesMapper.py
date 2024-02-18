@@ -2,7 +2,7 @@
 import sys
 
 for line in sys.stdin:
-  line.strip().split(':')
+  line = line.strip().split(':')
   fp = line[0].strip()
   tp = line[1].strip().split(' ')
   for p in tp:
