@@ -20,11 +20,8 @@ print(delimiter)
 for line in sys.stdin:
     line = line.strip().lower()
     for c in delimiter:
-        if c == '_':
-            continue
-        else:
-            line = line.replace(c, '')
-    words = line.split('_')
+        line = line.replace(c, ' ')
+    words = line.split(' ')
     for w in words:
         if w in stopWords:
             continue

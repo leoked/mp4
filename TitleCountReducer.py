@@ -9,9 +9,9 @@ for line in sys.stdin:
     line = line.strip().split('\t')
     
     if line[0] in wordDict:
-        wordDict[line] += 1
+        wordDict[line[0]] += 1
     else:
-        wordDict[line] = 1
-
+        wordDict[line[0]] = 1
+sorted_dict = dict(sorted(wordDict.items(), key=itemgetter(1), reverse=True))
 for w in wordDict:
     print('%s\t%s' % ( w , wordDict[w] )) 
