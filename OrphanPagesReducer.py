@@ -16,7 +16,7 @@ for line in sys.stdin:
 fList = set(fList)
 tList = set(tList)
 
-oList = list(fList.difference(tList))
+oList = fList.difference(tList)
 oList = sorted(oList)
 
 for i in oList:
