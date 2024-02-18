@@ -13,5 +13,5 @@ for line in sys.stdin:
     else:
         wordDict[line[0]] = 1
 sorted_dict = dict(sorted(wordDict.items(), key=itemgetter(1), reverse=True))
-for w in wordDict:
-    print('%s\t%s' % ( w , wordDict[w] )) 
+for w in sorted_dict:
+    print('%s\t%s' % ( w , sorted_dict[w] )) 
