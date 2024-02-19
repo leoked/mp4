@@ -9,7 +9,7 @@ for line in sys.stdin:
 
     league.append([int(line[0]) , int(line[1])])  
 
-rank = [0 for _ in range(league)]
+rank = [0] * len(league)
 
 for i in range(len(league)):
     count = 0
