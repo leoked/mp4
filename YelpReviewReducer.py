@@ -16,7 +16,7 @@ for line in sys.stdin:
 
 yelpTotal = []
 for item in yelp:
-    rate = item[0] / item[1]
+    rate = yelp[item][0] / yelp[item][1]
     yelpTotal.append([item, rate])
 
 yelpTotal = sorted(yelpTotal,key=lambda x : x[1], reverse=True)
