@@ -7,7 +7,7 @@ for line in sys.stdin:
         line = line.strip().split('\t')
         countList[line[0]] = int(line[1])
 
-sortD = dict(sorted(countList.items(), key = lambda item: item[1]))
+sortD = dict(sorted(countList.items(), key = lambda item: item[1],reverse=True))
 
 for w in sortD:
-        print('%s\t%s' % ( w , sortD[w] ))
+        print('%s' % ( w ))
