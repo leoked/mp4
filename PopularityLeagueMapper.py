@@ -6,7 +6,6 @@ leaguePath = sys.argv[1]
 with open(leaguePath) as f:
        league = f.read().split('\n')
 
-print(league)
 for line in sys.stdin:
        line = line.strip().split('\t')
        if line[0] in league:
