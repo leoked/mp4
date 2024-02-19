@@ -22,4 +22,4 @@ for item in yelp:
 yelpTotal = sorted(yelpTotal,key=lambda x : x[1], reverse=True)
 
 for item in yelpTotal:
-    print('%s\t%s' % ( item[0] , item[1] ))
+    print('%s\t%s' % ( item[0] , int(item[1]) ))
