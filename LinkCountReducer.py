@@ -13,5 +13,5 @@ for line in sys.stdin:
         linkDict[line] = 1
 
 sortD = dict(sorted(linkDict.items(), key = lambda item: item[1],reverse=True))
-for w in linkDict:
-    print('%s\t%s' % ( w , linkDict[w] ))
+for w in sortD:
+    print('%s\t%s' % ( w , sortD[w] ))
